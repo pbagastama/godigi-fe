@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function Footer() {
   return (
-    <footer className='relative h-[75vh] md:h-[90vh] pt-16 pb-8 overflow-hidden'>
+    <footer className='relative h-[75vh] md:h-[90vh] pt-10 md:pt-16 pb-8 overflow-hidden'>
       <div className='absolute inset-0'>
         <Image
           src='/assets/footer-bg.png'
@@ -39,7 +39,7 @@ export default function Footer() {
               alt='DGLD DIGILAND 2025'
               width={300}
               height={200}
-              className='w-64 lg:w-80 h-auto'
+              className='w-52 sm:w-64 lg:w-80 h-auto'
             />
           </div>
         </div>

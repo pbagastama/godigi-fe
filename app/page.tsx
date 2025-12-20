@@ -3,7 +3,8 @@
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import Layout from '@/components/Layout';
-import DiagonalMarquee from '@/components/DiagonalMarquee';
+import SponsorSection from '@/components/SponsorSection';
+import TicketPurchaseSection from '@/components/TicketPurchaseSection';
 
 export default function Home() {
   const [countdown, setCountdown] = useState({
@@ -524,109 +525,13 @@ export default function Home() {
       </section>
 
       {/* Ticket Purchase CTA Section */}
-      <section className='relative pt-16 pb-40 md:pb-20 overflow-hidden h-[60vh] md:h-auto'>
-        <div className='absolute inset-0'>
-          <Image
-            src='/assets/home/home-bg-section-7.png'
-            alt='Festival Musik Background'
-            fill
-            className='object-cover'
-          />
-        </div>
-        <div className='relative z-10 container mx-auto pt-0 md:pt-10 px-6 text-center md:text-left h-auto md:h-[40vh]'>
-          <h2 className='text-2xl md:text-3xl lg:text-5xl font-bold text-white mb-4'>
-            DAPATKAN TIKETNYA DENGAN MUDAH
-          </h2>
-          <p className='text-base md:text-lg text-white/90 mb-8'>
-            di MyTelkomsel, bersiap jadi bagian kemeriahan Digiland
-          </p>
-          <div className='flex flex-col items-center md:items-start justify-center md:justify-start gap-6'>
-            <Image
-              src='/assets/home/section-7-logo-mytelkomsel.png'
-              alt='MyTelkomsel'
-              width={200}
-              height={60}
-              className='h-12 w-auto'
-            />
-            <button className='flex cursor-pointer border-2 border-gray-800 text-gray-800 px-6 py-3 font-semibold hover:bg-gray-800 hover:text-white transition-all duration-300 items-center justify-center gap-2 group'>
-              <span>Beli Tiket</span>
-              <span className='group-hover:translate-x-1 transition-transform'>
-                →
-              </span>
-            </button>
-          </div>
-        </div>
-        <div className='absolute inset-0 pointer-events-none overflow-hidden'>
-          <DiagonalMarquee
-            text={marqueeText2}
-            variant='secondary'
-            offset={0}
-            direction='right'
-          />
-          <DiagonalMarquee
-            text={marqueeText1}
-            variant='primary'
-            offset={60}
-            direction='left'
-          />
-        </div>
-      </section>
+      <TicketPurchaseSection
+        marqueeText1={marqueeText1}
+        marqueeText2={marqueeText2}
+      />
 
       {/* Sponsor dan Partner Section */}
-      <section className='relative py-16 bg-white'>
-        <div className='px-4'>
-          <div className='container mx-auto px-6'>
-            <h2 className='text-xl md:text-3xl lg:text-5xl font-bold text-[#333] mb-6 md:mb-12 text-center md:text-left'>
-              SPONSOR DAN PARTNER
-            </h2>
-          </div>
-
-          <div className='flex flex-wrap justify-center items-center gap-2 lg:gap-0'>
-            <Image
-              src='/assets/home/section-8-brooks-logo.png'
-              alt='BROOKS'
-              width={120}
-              height={60}
-              className='h-auto w-64'
-            />
-            <Image
-              src='/assets/home/section-8-bri-logo.png'
-              alt='BRIlife'
-              width={120}
-              height={60}
-              className='h-auto w-64'
-            />
-            <Image
-              src='/assets/home/section-8-crystalin-logo.png'
-              alt='CRYSTALIN'
-              width={120}
-              height={60}
-              className='h-auto w-64'
-            />
-            <Image
-              src='/assets/home/section-8-sunpride-logo.png'
-              alt='Sipride'
-              width={120}
-              height={60}
-              className='h-auto w-64'
-            />
-            <Image
-              src='/assets/home/section-8-isoplus-logo.png'
-              alt='ISOPLUS'
-              width={120}
-              height={60}
-              className='h-auto w-64'
-            />
-            <Image
-              src='/assets/home/section-8-ot-logo.png'
-              alt='OT'
-              width={120}
-              height={60}
-              className='h-auto w-64'
-            />
-          </div>
-        </div>
-      </section>
+      <SponsorSection />
     </Layout>
   );
 }
