@@ -2,10 +2,12 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -13,6 +15,18 @@ export default function Header() {
 
   const closeMenu = () => {
     setIsMenuOpen(false);
+  };
+
+  const isActive = (href: string) => {
+    if (href.startsWith('/')) {
+      return pathname === href;
+    }
+    // Hash links tidak aktif secara default, hanya aktif jika di section tersebut
+    // Untuk sekarang, hash links tidak aktif kecuali jika diperlukan scroll detection
+    if (href.startsWith('#')) {
+      return false;
+    }
+    return false;
   };
 
   return (
@@ -31,28 +45,34 @@ export default function Header() {
         {/* Desktop Menu */}
         <div className='hidden lg:flex items-center gap-8 md:gap-12 text-white font-semibold'>
           <Link
-            href='#beranda'
-            className='hover:text-pink-400 transition-colors'>
+            href='/'
+            className={`transition-colors ${
+              pathname === '/' || pathname === ''
+                ? 'text-[#AA216A]'
+                : 'hover:text-[#AA216A]'
+            }`}>
             BERANDA
           </Link>
           <Link
-            href='#tentang'
-            className='hover:text-pink-400 transition-colors'>
+            href='/tentang'
+            className={`transition-colors ${
+              isActive('/tentang') ? 'text-[#AA216A]' : 'hover:text-[#AA216A]'
+            }`}>
             TENTANG
           </Link>
           <Link
             href='#digiland-run'
-            className='hover:text-pink-400 transition-colors'>
+            className='transition-colors hover:text-[#AA216A]'>
             DIGILAND RUN
           </Link>
           <Link
             href='#pasar-rakyat'
-            className='hover:text-pink-400 transition-colors'>
+            className='transition-colors hover:text-[#AA216A]'>
             PASAR RAKYAT
           </Link>
           <Link
             href='#galeri'
-            className='hover:text-pink-400 transition-colors'>
+            className='transition-colors hover:text-[#AA216A]'>
             GALERI
           </Link>
         </div>
@@ -89,33 +109,41 @@ export default function Header() {
         }`}>
         <div className='container mx-auto px-6 py-6 flex flex-col gap-4'>
           <Link
-            href='#beranda'
+            href='/'
             onClick={closeMenu}
-            className='text-white font-semibold hover:text-pink-400 transition-colors py-2'>
+            className={`font-semibold transition-colors py-2 ${
+              pathname === '/' || pathname === ''
+                ? 'text-[#AA216A]'
+                : 'text-white hover:text-[#AA216A]'
+            }`}>
             BERANDA
           </Link>
           <Link
-            href='#tentang'
+            href='/tentang'
             onClick={closeMenu}
-            className='text-white font-semibold hover:text-pink-400 transition-colors py-2'>
+            className={`font-semibold transition-colors py-2 ${
+              isActive('/tentang')
+                ? 'text-[#AA216A]'
+                : 'text-white hover:text-[#AA216A]'
+            }`}>
             TENTANG
           </Link>
           <Link
             href='#digiland-run'
             onClick={closeMenu}
-            className='text-white font-semibold hover:text-pink-400 transition-colors py-2'>
+            className='font-semibold transition-colors py-2 text-white hover:text-[#AA216A]'>
             DIGILAND RUN
           </Link>
           <Link
             href='#pasar-rakyat'
             onClick={closeMenu}
-            className='text-white font-semibold hover:text-pink-400 transition-colors py-2'>
+            className='font-semibold transition-colors py-2 text-white hover:text-[#AA216A]'>
             PASAR RAKYAT
           </Link>
           <Link
             href='#galeri'
             onClick={closeMenu}
-            className='text-white font-semibold hover:text-pink-400 transition-colors py-2'>
+            className='font-semibold transition-colors py-2 text-white hover:text-[#AA216A]'>
             GALERI
           </Link>
         </div>

@@ -471,12 +471,6 @@ export default function Home() {
                   className='object-cover'
                 />
               </div>
-              {/* <div className='p-6'>
-                <h3 className='text-xl font-bold text-gray-800 mb-2'>
-                  Telkomsel Gelar Digiland Run 2024
-                </h3>
-                <p className='text-gray-600 text-sm'>Selasa, 2024 Juni 04</p>
-              </div> */}
             </article>
             <article className='bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow'>
               <div className='relative h-48 sm:h-96 md:h-64 lg:h-80'>
@@ -487,13 +481,6 @@ export default function Home() {
                   className='object-cover'
                 />
               </div>
-              {/* <div className='p-6'>
-                <h3 className='text-xl font-bold text-gray-800 mb-2'>
-                  Antusiasme Tinggi, Lebih Dari 14000 Tiket Flash Sale Dari
-                  Early Bird Habis...
-                </h3>
-                <p className='text-gray-600 text-sm'>Kamis, 2024 Juni 13</p>
-              </div> */}
             </article>
             <article className='bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow'>
               <div className='relative h-48 sm:h-96 md:h-64 lg:h-80'>
@@ -504,13 +491,6 @@ export default function Home() {
                   className='object-cover'
                 />
               </div>
-              {/* <div className='p-6'>
-                <h3 className='text-xl font-bold text-gray-800 mb-2'>
-                  Telkom Sukses Investasi Lebih Dari 30.000 Pengunjung Digiland
-                  Indones...
-                </h3>
-                <p className='text-gray-600 text-sm'>Minggu, 2024 Mei 19</p>
-              </div> */}
             </article>
           </div>
           <div className='w-full flex justify-center md:hidden'>
