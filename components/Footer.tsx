@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function Footer() {
   return (
-    <footer className='relative h-[90vh] pt-16 pb-8 overflow-hidden'>
+    <footer className='relative h-[75vh] md:h-[90vh] pt-16 pb-8 overflow-hidden'>
       <div className='absolute inset-0'>
         <Image
           src='/assets/footer-bg.png'
@@ -11,8 +11,8 @@ export default function Footer() {
           className='object-cover'
         />
       </div>
-      <div className='relative h-[60vh] z-10 container mx-auto px-6'>
-        <div className='flex flex-col md:flex-row items-center justify-between mb-16 md:mb-24'>
+      <div className='relative h-[55vh] md:h-[60vh] z-10 container mx-auto px-6'>
+        <div className='flex flex-col-reverse md:flex-row items-center justify-between mb-16 md:mb-24'>
           <div className='flex items-center gap-4 mb-6 md:mb-0'>
             <Image
               src='/assets/footer-logo-telkomsel.png'
@@ -22,7 +22,7 @@ export default function Footer() {
               className='h-10 w-auto'
             />
           </div>
-          <div className='flex items-center gap-4'>
+          <div className='flex items-center mb-6 md:mb-0 gap-4'>
             <Image
               src='/assets/footer-logo-telkom.png'
               alt='Telkom Indonesia'
@@ -39,7 +39,7 @@ export default function Footer() {
               alt='DGLD DIGILAND 2025'
               width={300}
               height={200}
-              className='w-80 h-auto'
+              className='w-64 lg:w-80 h-auto'
             />
           </div>
         </div>

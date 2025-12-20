@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import Layout from '@/components/Layout';
+import DiagonalMarquee from '@/components/DiagonalMarquee';
 
 export default function Home() {
   const [countdown, setCountdown] = useState({
@@ -36,12 +37,16 @@ export default function Home() {
     return () => clearInterval(interval);
   }, []);
 
+  const marqueeText1 = '#DigilandRun • #DigilandMusic • #PasarRakyatDigiland';
+  const marqueeText2 =
+    '#ElevatingYourFuture • #ElevatingYourJoy • #Digiland2025';
+
   return (
     <Layout>
       {/* Hero Section */}
       <section
         id='beranda'
-        className='relative min-h-screen flex items-center justify-center text-white pt-20'>
+        className='relative min-h-screen flex flex-col items-center justify-center text-white pt-20'>
         <div className='absolute inset-0 z-0'>
           <Image
             src='/assets/home/home-hero-bg.png'
@@ -52,62 +57,123 @@ export default function Home() {
           />
           <div className='absolute inset-0 bg-black/40'></div>
         </div>
-        <div className='relative z-10 text-center px-6 max-w-4xl mx-auto'>
-          <h1 className='text-7xl md:text-9xl font-bold mb-6 tracking-tight'>
-            DIGILAND 2025
-          </h1>
-          <p className='text-2xl md:text-3xl font-semibold mb-4'>
-            Elevating Your Future
-          </p>
-          <p className='text-lg md:text-xl leading-relaxed max-w-2xl mx-auto'>
-            Digiland adalah acara signature yang menginspirasi, menciptakan, dan
-            memberdayakan komunitas untuk masa depan yang lebih baik.
+        <div className='flex relative z-10 overflow-hidden py-4 mb-4 w-full'>
+          <div className='flex animate-marquee-hero whitespace-nowrap'>
+            <h1 className='text-5xl md:text-8xl mb-6 font-light tracking-tight text-white'>
+              <span className='font-bold mx-8'> DIGILAND</span> 2025
+            </h1>
+            <div className='text-5xl md:text-8xl mb-6 font-light tracking-tight text-white'>
+              <span className='font-bold mx-8'> DIGILAND</span> 2025
+            </div>
+            <div className='text-5xl md:text-8xl mb-6 font-light tracking-tight text-white'>
+              <span className='font-bold mx-8'> DIGILAND</span> 2025
+            </div>
+          </div>
+        </div>
+        <div className='container relative z-10 text-left px-6 w-full'>
+          <p className='text-base md:text-lg leading-relaxed max-w-2xl'>
+            Digiland 2025 hadir sebagai signature annual event Telkom Indonesia,
+            menyajikan kegiatan yang inspiratif, inovatif dan menghibur
+            masyarakat.
+            <br />
+            <br />
+            Semangat #ElevatingYourFuture kembali melalui acara Digiland Run,
+            Digiland Music, dan Pasar Rakyat UMKM.
           </p>
         </div>
       </section>
 
       {/* Countdown Section */}
-      <section className='relative py-16 overflow-hidden'>
+      <section className='relative pt-16 md:pt-24 pb-0 overflow-hidden'>
+        <div className='hidden md:block relative'>
+          <Image
+            src='/assets/home/icon-bg-elevate.png'
+            alt='gradient background'
+            width={340}
+            height={140}
+            className='object-contain w-[340px] h-[140px] absolute top-0 left-[150px]'
+          />
+        </div>
+        <div className='container relative z-10 text-left px-6 w-full'>
+          <div className='max-w-4xl ms-auto'>
+            <Image
+              src='/assets/ElevatingYourJoy.png'
+              alt='elevate'
+              width={160}
+              height={160}
+              className='w-72 h-auto mb-6'
+            />
+            <p className='text-base md:text-lg leading-relaxed'>
+              Menghadirkan Digiland sebagai pengalaman yang imersif, interaktif,
+              dengan didorong oleh inovasi, yang menyajikan kebahagiaan,
+              mempererat hubungan, serta menyebarkan energi positif yang
+              berkelanjutan melalui teknologi, hiburan, pemberdayaan, dan
+              komunitas, untuk menciptakan keterlibatan yang lebih mendalam
+              dengan masyarakat serta memberi dampak jangka panjang.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section className='relative py-16 overflow-hidden h-auto md:h-[90vh] mt-0 mb-10 md:mb-0'>
+        <div className='hidden md:block relative'>
+          <Image
+            src='/assets/run/section-2-gradient.png'
+            alt='gradient background'
+            width={420}
+            height={800}
+            className='object-contain w-[420px] h-[820px] absolute top-[-160px] right-[-100px]'
+          />
+        </div>
         <div className='absolute inset-0'>
           <Image
             src='/assets/home/bg-count-elevate.png'
             alt='Countdown Background'
             fill
-            className='object-cover'
+            className='object-cover md:object-contain'
           />
         </div>
         <div className='relative z-10 container mx-auto px-6'>
-          <div className='flex flex-wrap justify-center gap-8 md:gap-12'>
+          <div className='flex flex-wrap justify-center items-center gap-8 md:gap-12 h-auto md:h-[75vh]'>
             <div className='text-center'>
-              <div className='text-5xl md:text-7xl font-bold text-white mb-2'>
+              <div className='text-3xl md:text-5xl lg:text-7xl font-bold text-white mb-2'>
                 {countdown.days}
               </div>
-              <div className='text-xl md:text-2xl text-white/90'>HARI</div>
+              <div className='text-base md:text-lg lg:text-xl text-white/90'>
+                HARI
+              </div>
             </div>
             <div className='text-center'>
-              <div className='text-5xl md:text-7xl font-bold text-white mb-2'>
+              <div className='text-3xl md:text-5xl lg:text-7xl font-bold text-white mb-2'>
                 {countdown.hours}
               </div>
-              <div className='text-xl md:text-2xl text-white/90'>JAM</div>
+              <div className='text-base md:text-lg lg:text-xl text-white/90'>
+                JAM
+              </div>
             </div>
             <div className='text-center'>
-              <div className='text-5xl md:text-7xl font-bold text-white mb-2'>
+              <div className='text-3xl md:text-5xl lg:text-7xl font-bold text-white mb-2'>
                 {countdown.minutes}
               </div>
-              <div className='text-xl md:text-2xl text-white/90'>MENIT</div>
+              <div className='text-base md:text-lg lg:text-xl text-white/90'>
+                MENIT
+              </div>
             </div>
             <div className='text-center'>
-              <div className='text-5xl md:text-7xl font-bold text-white mb-2'>
+              <div className='text-3xl md:text-5xl lg:text-7xl font-bold text-white mb-2'>
                 {countdown.seconds}
               </div>
-              <div className='text-xl md:text-2xl text-white/90'>DETIK</div>
+              <div className='text-base md:text-lg lg:text-xl text-white/90'>
+                DETIK
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Digiland Run Section */}
-      <section id='digiland-run' className='relative py-20 overflow-hidden'>
+      <section
+        id='digiland-run'
+        className='relative py-20 overflow-hidden h-[50vh] md:h-screen'>
         <div className='absolute inset-0'>
           <Image
             src='/assets/home/home-bg-section-3.png'
@@ -115,118 +181,218 @@ export default function Home() {
             fill
             className='object-cover'
           />
-          <div className='absolute inset-0 bg-teal-500/30'></div>
         </div>
-        <div className='relative z-10 container mx-auto px-6'>
-          <h2 className='text-5xl md:text-7xl font-bold text-white mb-4 text-center'>
-            DGLD DIGILAND RUN 2025
-          </h2>
-          <p className='text-xl md:text-2xl text-gray-800 text-center mb-12 font-semibold'>
-            LARI UNTUK KEBAHAGIAANMU
-          </p>
-          <div className='flex flex-wrap justify-center gap-6 mb-12'>
-            <button className='bg-teal-500 hover:bg-teal-600 text-white px-12 py-6 rounded-full text-2xl font-bold transition-colors'>
-              5K
-            </button>
-            <button className='bg-teal-500 hover:bg-teal-600 text-white px-12 py-6 rounded-full text-2xl font-bold transition-colors'>
-              10K
-            </button>
-            <button className='bg-teal-500 hover:bg-teal-600 text-white px-12 py-6 rounded-full text-2xl font-bold transition-colors'>
-              HALF MARATHON
-            </button>
-          </div>
-          <div className='max-w-3xl mx-auto text-center'>
-            <p className='text-gray-800 mb-6 text-lg leading-relaxed'>
-              Daftarkan dirimu sekarang untuk menjadi bagian dari Digiland Run
-              2025. Acara lari yang penuh semangat dan kebahagiaan untuk semua
-              kalangan.
-            </p>
-            <button className='bg-white hover:bg-gray-100 text-teal-600 px-8 py-3 rounded-full font-semibold transition-colors'>
-              Selengkapnya
-            </button>
+        <Image
+          src='/assets/logo-dgld-big.png'
+          alt='DGLD DIGILAND 2025'
+          width={300}
+          height={200}
+          className='w-64 lg:w-80 h-auto absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'
+        />
+      </section>
+
+      {/* Digiland Run Content Section */}
+      <section className='relative py-20 overflow-hidden'>
+        <div className='relative'>
+          <Image
+            src='/assets/home/bg-gradient-1.png'
+            alt='gradient background'
+            width={495}
+            height={879}
+            className='object-contain w-[495px] h-auto absolute top-[-200px] left-0'
+          />
+        </div>
+        <div className='relative'>
+          <Image
+            src='/assets/home/marathon-section-4.png'
+            alt='marathon'
+            width={432}
+            height={648}
+            className='object-contain w-[432px] h-auto absolute top-[-200px] right-0 md:right-[80px] z-10'
+          />
+        </div>
+        <div className='relative'>
+          <Image
+            src='/assets/home/bg-gradient-2.png'
+            alt='gradient background'
+            width={959}
+            height={879}
+            className='object-contain w-[959px] h-auto absolute top-[-200px] right-[320px] z-0'
+          />
+        </div>
+        <div className='container mx-auto px-6 relative z-20'>
+          <div className='mx-auto'>
+            <div className='mb-12'>
+              <h2 className='text-3xl md:text-5xl lg:text-7xl font-bold text-center md:text-left text-gray-800 mb-4'>
+                LARI UNTUK
+                <br />
+                KEBAHAGIAANMU
+              </h2>
+            </div>
+            <div className='flex flex-wrap justify-center gap-6 md:gap-8 mb-12'>
+              <button className='relative group transition-all duration-300 transform hover:scale-105'>
+                <Image
+                  src='/assets/home/cloud-1-section-4.png'
+                  alt='Cloud 1'
+                  width={324}
+                  height={200}
+                  className='relative w-[240px] h-auto md:w-[300px]'
+                />
+              </button>
+              <button className='relative group transition-all duration-300 transform hover:scale-105'>
+                <Image
+                  src='/assets/home/cloud-2-section-4.png'
+                  alt='Cloud 1'
+                  width={200}
+                  height={150}
+                  className='relative w-[240px] h-auto md:w-[300px]'
+                />
+              </button>
+              <button className='relative group transition-all duration-300 transform hover:scale-105'>
+                <Image
+                  src='/assets/home/cloud-3-section-4.png'
+                  alt='Cloud 1'
+                  width={200}
+                  height={150}
+                  className='relative w-[240px] h-auto md:w-[300px]'
+                />
+              </button>
+            </div>
+
+            {/* Promotional Text */}
+            <div className='flex flex-col md:flex-row justify-between gap-4 md:mb-8 space-y-4'>
+              <div className='w-full md:w-1/2 max-w-lg'>
+                <p className='text-gray-700 text-sm md:text-base leading-relaxed mb-6'>
+                  Daftar Digiland dan dapatkan{' '}
+                  <span className='font-bold'>Free Kuota 15Gb</span> khusus
+                  pelanggan Telkomsel
+                </p>
+                <p className='text-gray-700 text-sm md:text-base leading-relaxed'>
+                  Bersiaplah untuk Digiland Run, bagian spesial dari Digiland
+                  2025 yang mengajak runner enthusiast, komunitas lari, dan
+                  masyarakat untuk berlari dengan penuh semangat dalam pilihan
+                  kategori 5K, 10K, dan Half Marathon.
+                </p>
+              </div>
+
+              <div className='w-full md:w-1/2 flex justify-start md:justify-end items-start md:items-end'>
+                <button className='cursor-pointer border-2 border-gray-800 text-gray-800 px-6 py-3 font-semibold hover:bg-gray-800 hover:text-white transition-all duration-300 flex items-center gap-2 group'>
+                  <span>Selengkapnya</span>
+                  <span className='group-hover:translate-x-1 transition-transform'>
+                    →
+                  </span>
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Festival Musik Section */}
-      <section className='relative py-20 overflow-hidden'>
-        <div className='absolute inset-0 bg-gradient-to-br from-teal-400 via-purple-500 to-blue-500'></div>
-        <div className='relative z-10 container mx-auto px-6'>
-          <div className='flex justify-between items-center mb-12'>
-            <h2 className='text-4xl md:text-5xl font-bold text-gray-800'>
+      <section className='relative py-16 md:py-20 overflow-hidden'>
+        <div className='absolute inset-0'>
+          <Image
+            src='/assets/home/home-bg-section-5.png'
+            alt='Festival Musik Background'
+            fill
+            className='object-cover'
+          />
+        </div>
+        <div className='relative z-10 mx-auto'>
+          <div className='container mx-auto px-6 flex justify-center md:justify-between items-center mb-6 md:mb-12 w-full'>
+            <h2 className='text-3xl md:text-4xl lg:text-6xl font-bold text-white text-center md:text-left'>
               FESTIVAL MUSIK
             </h2>
-            <button className='bg-white hover:bg-gray-100 text-gray-800 px-6 py-2 rounded-full font-semibold transition-colors'>
-              Lihat Semua
+            <button className='hidden md:flex cursor-pointer border-2 border-gray-800 text-gray-800 px-6 py-3 font-semibold hover:bg-gray-800 hover:text-white transition-all duration-300 items-center gap-2 group'>
+              <span>Beli Tiketnya</span>
+              <span className='group-hover:translate-x-1 transition-transform'>
+                →
+              </span>
             </button>
           </div>
-          <div className='flex gap-8 overflow-x-auto pb-4 scrollbar-hide'>
+          <div className='flex gap-8 overflow-x-auto pt-4 pb-12 scrollbar-hide'>
             <div className='flex-shrink-0 text-center'>
-              <div className='w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden mb-4 mx-auto border-4 border-white shadow-lg'>
+              <div className='w-40 md:w-60 lg:w-80 h-auto mb-4 mx-auto'>
                 <Image
                   src='/assets/home/art-bernadya-section-5.png'
                   alt='BERNADYA'
-                  width={160}
-                  height={160}
+                  width={260}
+                  height={350}
                   className='w-full h-full object-cover'
                 />
               </div>
-              <p className='text-white font-semibold'>BERNADYA</p>
             </div>
             <div className='flex-shrink-0 text-center'>
-              <div className='w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden mb-4 mx-auto border-4 border-white shadow-lg'>
+              <div className='w-40 md:w-60 lg:w-80 h-auto mb-4 mx-auto'>
                 <Image
                   src='/assets/home/art-tiara-section-5.png'
                   alt='TIARA ANDINI'
-                  width={160}
-                  height={160}
+                  width={260}
+                  height={350}
                   className='w-full h-full object-cover'
                 />
               </div>
-              <p className='text-white font-semibold'>TIARA ANDINI</p>
             </div>
             <div className='flex-shrink-0 text-center'>
-              <div className='w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden mb-4 mx-auto border-4 border-white shadow-lg'>
-                <Image
-                  src='/assets/home/art-padi-section-5.png'
-                  alt='PROJECT POP'
-                  width={160}
-                  height={160}
-                  className='w-full h-full object-cover'
-                />
-              </div>
-              <p className='text-white font-semibold'>PROJECT POP</p>
-            </div>
-            <div className='flex-shrink-0 text-center'>
-              <div className='w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden mb-4 mx-auto border-4 border-white shadow-lg'>
+              <div className='w-40 md:w-60 lg:w-80 h-auto mb-4 mx-auto'>
                 <Image
                   src='/assets/home/art-jkt48-section-5.png'
                   alt='JKT48'
-                  width={160}
-                  height={160}
+                  width={260}
+                  height={350}
                   className='w-full h-full object-cover'
                 />
               </div>
-              <p className='text-white font-semibold'>JKT48</p>
             </div>
             <div className='flex-shrink-0 text-center'>
-              <div className='w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden mb-4 mx-auto border-4 border-white shadow-lg'>
+              <div className='w-40 md:w-60 lg:w-80 h-auto mb-4 mx-auto'>
+                <Image
+                  src='/assets/home/art-projectpop-section-5.png'
+                  alt='PROJECT POP'
+                  width={260}
+                  height={350}
+                  className='w-full h-full object-cover'
+                />
+              </div>
+            </div>
+            <div className='flex-shrink-0 text-center'>
+              <div className='w-40 md:w-60 lg:w-80 h-auto mb-4 mx-auto'>
+                <Image
+                  src='/assets/home/art-padi-section-5.png'
+                  alt='PADI'
+                  width={260}
+                  height={350}
+                  className='w-full h-full object-cover'
+                />
+              </div>
+            </div>
+            <div className='flex-shrink-0 text-center'>
+              <div className='w-40 md:w-60 lg:w-80 h-auto mb-4 mx-auto'>
                 <Image
                   src='/assets/home/art-nassar-section-5.png'
                   alt='NASSAR'
-                  width={160}
-                  height={160}
+                  width={260}
+                  height={350}
                   className='w-full h-full object-cover'
                 />
               </div>
-              <p className='text-white font-semibold'>NASSAR</p>
             </div>
+          </div>
+          <div className='w-full flex justify-center md:hidden'>
+            <button className='flex cursor-pointer border-2 border-gray-800 text-gray-800 px-6 py-3 font-semibold hover:bg-gray-800 hover:text-white transition-all duration-300 items-center justify-center gap-2 group'>
+              <span>Beli Tiketnya</span>
+              <span className='group-hover:translate-x-1 transition-transform'>
+                →
+              </span>
+            </button>
           </div>
         </div>
       </section>
 
       {/* Pasar Rakyat Section */}
-      <section id='pasar-rakyat' className='relative py-20 overflow-hidden'>
+      <section
+        id='pasar-rakyat'
+        className='relative py-10 md:py-20 overflow-hidden h-[110vh] md:h-[120vh]'>
         <div className='absolute inset-0'>
           <Image
             src='/assets/home/home-bg-section-6.png'
@@ -236,99 +402,145 @@ export default function Home() {
           />
         </div>
         <div className='relative z-10 container mx-auto px-6'>
-          <h2 className='text-4xl md:text-5xl font-bold text-gray-800 mb-8'>
-            PASAR RAKYAT UMKM
-          </h2>
-          <div className='max-w-3xl'>
-            <p className='text-gray-800 mb-6 text-lg leading-relaxed'>
-              Nikmati berbagai kuliner dan produk lokal di #PasarRakyatDigiland.
-              Dukung UMKM Indonesia dan rasakan kehangatan pasar tradisional
-              dengan sentuhan modern.
-            </p>
-            <button className='bg-teal-500 hover:bg-teal-600 text-white px-8 py-3 rounded-full font-semibold transition-colors'>
-              Selengkapnya
-            </button>
-          </div>
+          <Image
+            src='/assets/home/title-section-6.png'
+            alt='Pasar Rakyat UMKM'
+            width={546}
+            height={116}
+            className='w-[600px] md:w-[400px] lg:w-[546] h-auto mt-0 md:mt-10 lg:mt-20'
+          />
+        </div>
+        <div className='flex relative z-10 container mx-auto px-6 md:hidden flex-col'>
+          <p className='text-gray-800 mb-6 text-lg leading-relaxed text-left'>
+            Nikmati jajanan{' '}
+            <span className='font-bold'>#PasarRakyatDigiland</span> di acara{' '}
+            <span className='font-bold'>#DIGILAND 2025</span>.
+            <br />
+            <br />
+            Jangan lupa beli yang banyak ya untuk membantu para UMKM di
+            Indonesia!!.
+          </p>
+          <button className='cursor-pointer border-2 border-gray-800 text-gray-800 px-6 py-3 font-semibold hover:bg-gray-800 hover:text-white transition-all duration-300 flex items-center gap-2 group'>
+            <span>Selengkapnya</span>
+            <span className='group-hover:translate-x-1 transition-transform'>
+              →
+            </span>
+          </button>
+        </div>
+        <div className='hidden relative z-10 container ms-auto pr-20 md:flex flex-col flex-end items-end justify-end max-w-xl h-[80vh]'>
+          <p className='text-gray-800 mb-6 text-lg leading-relaxed text-right'>
+            Nikmati jajanan{' '}
+            <span className='font-bold'>#PasarRakyatDigiland</span> di acara{' '}
+            <span className='font-bold'>#DIGILAND 2025</span>.
+            <br />
+            <br />
+            Jangan lupa beli yang banyak ya untuk membantu para UMKM di
+            Indonesia!!.
+          </p>
+          <button className='cursor-pointer border-2 border-gray-800 text-gray-800 px-6 py-3 font-semibold hover:bg-gray-800 hover:text-white transition-all duration-300 flex items-center gap-2 group'>
+            <span>Selengkapnya</span>
+            <span className='group-hover:translate-x-1 transition-transform'>
+              →
+            </span>
+          </button>
         </div>
       </section>
 
       {/* Artikel Terbaru Section */}
       <section className='relative py-20 bg-white'>
         <div className='container mx-auto px-6'>
-          <div className='flex justify-between items-center mb-12'>
-            <h2 className='text-4xl md:text-5xl font-bold text-gray-800'>
+          <div className='flex justify-center md:justify-between items-center mb-8 md:mb-16'>
+            <h2 className='text-3xl md:text-5xl font-bold text-gray-800'>
               ARTIKEL TERBARU
             </h2>
-            <button className='bg-gray-100 hover:bg-gray-200 text-gray-800 px-6 py-2 rounded-full font-semibold transition-colors'>
-              Lihat Lebih Banyak
+            <button className='hidden cursor-pointer border-2 border-gray-800 text-gray-800 px-6 py-3 font-semibold hover:bg-gray-800 hover:text-white transition-all duration-300 md:flex items-center gap-2 group'>
+              <span>Lihat Lebih Banyak</span>
+              <span className='group-hover:translate-x-1 transition-transform'>
+                →
+              </span>
             </button>
           </div>
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+          <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 mb-10 md:mb-0'>
             <article className='bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow'>
-              <div className='relative h-48'>
+              <div className='relative h-48 sm:h-96 md:h-64 lg:h-80'>
                 <Image
-                  src='/assets/gallery/gallery-article-1.png'
+                  src='/assets/home/article-1.png'
                   alt='Article 1'
                   fill
                   className='object-cover'
                 />
               </div>
-              <div className='p-6'>
+              {/* <div className='p-6'>
                 <h3 className='text-xl font-bold text-gray-800 mb-2'>
                   Telkomsel Gelar Digiland Run 2024
                 </h3>
                 <p className='text-gray-600 text-sm'>Selasa, 2024 Juni 04</p>
-              </div>
+              </div> */}
             </article>
             <article className='bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow'>
-              <div className='relative h-48'>
+              <div className='relative h-48 sm:h-96 md:h-64 lg:h-80'>
                 <Image
-                  src='/assets/gallery/gallery-article-2.png'
+                  src='/assets/home/article-2.png'
                   alt='Article 2'
                   fill
                   className='object-cover'
                 />
               </div>
-              <div className='p-6'>
+              {/* <div className='p-6'>
                 <h3 className='text-xl font-bold text-gray-800 mb-2'>
                   Antusiasme Tinggi, Lebih Dari 14000 Tiket Flash Sale Dari
                   Early Bird Habis...
                 </h3>
                 <p className='text-gray-600 text-sm'>Kamis, 2024 Juni 13</p>
-              </div>
+              </div> */}
             </article>
             <article className='bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow'>
-              <div className='relative h-48'>
+              <div className='relative h-48 sm:h-96 md:h-64 lg:h-80'>
                 <Image
-                  src='/assets/gallery/gallery-article-1.png'
+                  src='/assets/home/article-3.png'
                   alt='Article 3'
                   fill
                   className='object-cover'
                 />
               </div>
-              <div className='p-6'>
+              {/* <div className='p-6'>
                 <h3 className='text-xl font-bold text-gray-800 mb-2'>
                   Telkom Sukses Investasi Lebih Dari 30.000 Pengunjung Digiland
                   Indones...
                 </h3>
                 <p className='text-gray-600 text-sm'>Minggu, 2024 Mei 19</p>
-              </div>
+              </div> */}
             </article>
+          </div>
+          <div className='w-full flex justify-center md:hidden'>
+            <button className='flex cursor-pointer border-2 border-gray-800 text-gray-800 px-6 py-3 font-semibold hover:bg-gray-800 hover:text-white transition-all duration-300 items-center justify-center gap-2 group'>
+              <span>Lihat Lebih Banyak</span>
+              <span className='group-hover:translate-x-1 transition-transform'>
+                →
+              </span>
+            </button>
           </div>
         </div>
       </section>
 
       {/* Ticket Purchase CTA Section */}
-      <section className='relative py-20 overflow-hidden'>
-        <div className='absolute inset-0 bg-gradient-to-br from-teal-400 via-purple-500 to-blue-500'></div>
-        <div className='relative z-10 container mx-auto px-6 text-center'>
-          <h2 className='text-4xl md:text-6xl font-bold text-white mb-4'>
+      <section className='relative pt-16 pb-40 md:pb-20 overflow-hidden h-[60vh] md:h-auto'>
+        <div className='absolute inset-0'>
+          <Image
+            src='/assets/home/home-bg-section-7.png'
+            alt='Festival Musik Background'
+            fill
+            className='object-cover'
+          />
+        </div>
+        <div className='relative z-10 container mx-auto pt-0 md:pt-10 px-6 text-center md:text-left h-auto md:h-[40vh]'>
+          <h2 className='text-2xl md:text-3xl lg:text-5xl font-bold text-white mb-4'>
             DAPATKAN TIKETNYA DENGAN MUDAH
           </h2>
-          <p className='text-xl md:text-2xl text-white/90 mb-8'>
+          <p className='text-base md:text-lg text-white/90 mb-8'>
             di MyTelkomsel, bersiap jadi bagian kemeriahan Digiland
           </p>
-          <div className='flex flex-col md:flex-row items-center justify-center gap-6'>
+          <div className='flex flex-col items-center md:items-start justify-center md:justify-start gap-6'>
             <Image
               src='/assets/home/section-7-logo-mytelkomsel.png'
               alt='MyTelkomsel'
@@ -336,67 +548,81 @@ export default function Home() {
               height={60}
               className='h-12 w-auto'
             />
-            <button className='bg-white hover:bg-gray-100 text-teal-600 px-8 py-4 rounded-full font-bold text-lg transition-colors'>
-              Beli Tiket
+            <button className='flex cursor-pointer border-2 border-gray-800 text-gray-800 px-6 py-3 font-semibold hover:bg-gray-800 hover:text-white transition-all duration-300 items-center justify-center gap-2 group'>
+              <span>Beli Tiket</span>
+              <span className='group-hover:translate-x-1 transition-transform'>
+                →
+              </span>
             </button>
           </div>
-          <div className='mt-12 flex flex-wrap justify-center gap-4 text-white/80 text-xl md:text-2xl font-semibold'>
-            <span className='transform -rotate-12'>#DigilandRun</span>
-            <span className='transform rotate-12'>#Digiland</span>
-            <span className='transform -rotate-12'>#ElevatingYourFuture</span>
-            <span className='transform rotate-12'>2025</span>
-          </div>
+        </div>
+        <div className='absolute inset-0 pointer-events-none overflow-hidden'>
+          <DiagonalMarquee
+            text={marqueeText2}
+            variant='secondary'
+            offset={0}
+            direction='right'
+          />
+          <DiagonalMarquee
+            text={marqueeText1}
+            variant='primary'
+            offset={60}
+            direction='left'
+          />
         </div>
       </section>
 
       {/* Sponsor dan Partner Section */}
       <section className='relative py-16 bg-white'>
-        <div className='container mx-auto px-6'>
-          <h2 className='text-4xl md:text-5xl font-bold text-gray-800 mb-12 text-center'>
-            SPONSOR DAN PARTNER
-          </h2>
-          <div className='flex flex-wrap justify-center items-center gap-8 md:gap-12'>
+        <div className='px-4'>
+          <div className='container mx-auto px-6'>
+            <h2 className='text-xl md:text-3xl lg:text-5xl font-bold text-[#333] mb-6 md:mb-12 text-center md:text-left'>
+              SPONSOR DAN PARTNER
+            </h2>
+          </div>
+
+          <div className='flex flex-wrap justify-center items-center gap-2 lg:gap-0'>
             <Image
               src='/assets/home/section-8-brooks-logo.png'
               alt='BROOKS'
               width={120}
               height={60}
-              className='h-12 w-auto opacity-70 hover:opacity-100 transition-opacity'
+              className='h-auto w-64'
             />
             <Image
               src='/assets/home/section-8-bri-logo.png'
               alt='BRIlife'
               width={120}
               height={60}
-              className='h-12 w-auto opacity-70 hover:opacity-100 transition-opacity'
+              className='h-auto w-64'
             />
             <Image
               src='/assets/home/section-8-crystalin-logo.png'
               alt='CRYSTALIN'
               width={120}
               height={60}
-              className='h-12 w-auto opacity-70 hover:opacity-100 transition-opacity'
+              className='h-auto w-64'
             />
             <Image
               src='/assets/home/section-8-sunpride-logo.png'
               alt='Sipride'
               width={120}
               height={60}
-              className='h-12 w-auto opacity-70 hover:opacity-100 transition-opacity'
+              className='h-auto w-64'
             />
             <Image
               src='/assets/home/section-8-isoplus-logo.png'
               alt='ISOPLUS'
               width={120}
               height={60}
-              className='h-12 w-auto opacity-70 hover:opacity-100 transition-opacity'
+              className='h-auto w-64'
             />
             <Image
               src='/assets/home/section-8-ot-logo.png'
               alt='OT'
               width={120}
               height={60}
-              className='h-12 w-auto opacity-70 hover:opacity-100 transition-opacity'
+              className='h-auto w-64'
             />
           </div>
         </div>
