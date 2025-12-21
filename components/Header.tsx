@@ -43,12 +43,12 @@ export default function Header() {
         </Link>
 
         {/* Desktop Menu */}
-        <div className='hidden lg:flex items-center gap-8 md:gap-12 text-white font-semibold'>
+        <div className='hidden lg:flex items-center gap-8 md:gap-20 text-white font-semibold'>
           <Link
             href='/'
             className={`transition-colors ${
               pathname === '/' || pathname === ''
-                ? 'text-[#AA216A]'
+                ? 'text-[#AA216A] font-bold'
                 : 'hover:text-[#AA216A]'
             }`}>
             BERANDA
@@ -56,7 +56,9 @@ export default function Header() {
           <Link
             href='/tentang'
             className={`transition-colors ${
-              isActive('/tentang') ? 'text-[#AA216A]' : 'hover:text-[#AA216A]'
+              isActive('/tentang')
+                ? 'text-[#AA216A] font-bold'
+                : 'hover:text-[#AA216A]'
             }`}>
             TENTANG
           </Link>
@@ -66,13 +68,12 @@ export default function Header() {
             DIGILAND RUN
           </Link>
           <Link
-            href='#pasar-rakyat'
-            className='transition-colors hover:text-[#AA216A]'>
-            PASAR RAKYAT
-          </Link>
-          <Link
-            href='#galeri'
-            className='transition-colors hover:text-[#AA216A]'>
+            href='/galeri'
+            className={`transition-colors ${
+              isActive('/galeri')
+                ? 'text-[#AA216A] font-bold'
+                : 'hover:text-[#AA216A]'
+            }`}>
             GALERI
           </Link>
         </div>
@@ -135,15 +136,13 @@ export default function Header() {
             DIGILAND RUN
           </Link>
           <Link
-            href='#pasar-rakyat'
+            href='/galeri'
             onClick={closeMenu}
-            className='font-semibold transition-colors py-2 text-white hover:text-[#AA216A]'>
-            PASAR RAKYAT
-          </Link>
-          <Link
-            href='#galeri'
-            onClick={closeMenu}
-            className='font-semibold transition-colors py-2 text-white hover:text-[#AA216A]'>
+            className={`font-semibold transition-colors py-2 ${
+              isActive('/galeri')
+                ? 'text-[#AA216A]'
+                : 'text-white hover:text-[#AA216A]'
+            }`}>
             GALERI
           </Link>
         </div>

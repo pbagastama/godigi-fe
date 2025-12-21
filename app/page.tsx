@@ -312,7 +312,7 @@ export default function Home() {
             </button>
           </div>
           <div className='flex gap-8 overflow-x-auto pt-4 pb-12 scrollbar-hide'>
-            <div className='flex-shrink-0 text-center'>
+            <div className='shrink-0 text-center'>
               <div className='w-40 md:w-60 lg:w-80 h-auto mb-4 mx-auto'>
                 <Image
                   src='/assets/home/art-bernadya-section-5.png'
@@ -323,7 +323,7 @@ export default function Home() {
                 />
               </div>
             </div>
-            <div className='flex-shrink-0 text-center'>
+            <div className='shrink-0 text-center'>
               <div className='w-40 md:w-60 lg:w-80 h-auto mb-4 mx-auto'>
                 <Image
                   src='/assets/home/art-tiara-section-5.png'
@@ -334,7 +334,7 @@ export default function Home() {
                 />
               </div>
             </div>
-            <div className='flex-shrink-0 text-center'>
+            <div className='shrink-0 text-center'>
               <div className='w-40 md:w-60 lg:w-80 h-auto mb-4 mx-auto'>
                 <Image
                   src='/assets/home/art-jkt48-section-5.png'
@@ -345,7 +345,7 @@ export default function Home() {
                 />
               </div>
             </div>
-            <div className='flex-shrink-0 text-center'>
+            <div className='shrink-0 text-center'>
               <div className='w-40 md:w-60 lg:w-80 h-auto mb-4 mx-auto'>
                 <Image
                   src='/assets/home/art-projectpop-section-5.png'
@@ -356,7 +356,7 @@ export default function Home() {
                 />
               </div>
             </div>
-            <div className='flex-shrink-0 text-center'>
+            <div className='shrink-0 text-center'>
               <div className='w-40 md:w-60 lg:w-80 h-auto mb-4 mx-auto'>
                 <Image
                   src='/assets/home/art-padi-section-5.png'
@@ -367,7 +367,7 @@ export default function Home() {
                 />
               </div>
             </div>
-            <div className='flex-shrink-0 text-center'>
+            <div className='shrink-0 text-center'>
               <div className='w-40 md:w-60 lg:w-80 h-auto mb-4 mx-auto'>
                 <Image
                   src='/assets/home/art-nassar-section-5.png'
