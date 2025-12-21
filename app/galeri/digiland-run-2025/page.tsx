@@ -96,9 +96,9 @@ export default function GaleriDetailPage() {
         </div>
       </section>
 
-      {/* Gallery Detail Section */}
+      {/* Run Section */}
       <section className='relative py-20 overflow-hidden h-auto'>
-        <div className='relative z-0'>
+        <div className='relative z-0 hidden md:block'>
           <Image
             src='/assets/about/about-gradient-section-2.png'
             alt='gradient background'

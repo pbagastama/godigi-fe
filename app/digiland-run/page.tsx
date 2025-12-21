@@ -113,10 +113,10 @@ export default function DigilandRunPage() {
           </div>
         </div>
         <div className='container mx-auto px-4 md:px-6 py-20 relative z-10'>
-          <div className='absolute inset-0'>
+          <div className='absolute inset-0 hidden md:block'>
             <Image
               src='/assets/run/run-bg-section-3.png'
-              alt='Gallery Background'
+              alt='Race Background'
               fill
               className='object-cover relative z-0'
             />
@@ -166,8 +166,11 @@ export default function DigilandRunPage() {
             </div>
           </div>
           <div className='flex flex-col items-start md:items-end text-left md:text-right mt-20 mb-8 px-4 md:px-24 max-w-4xl ms-auto relative z-10'>
-            Item-item yang dukung kenyamanan & kelancaran lari, serta medali
-            sesuai kategori untuk kamu yang sampai garis finish.
+            <div className='text-base md:text-lg text-[#333] relative z-10'>
+              Item-item yang dukung kenyamanan & kelancaran lari, serta medali
+              sesuai kategori untuk kamu yang sampai garis finish.
+            </div>
+
             <Link
               href='/galeri/digiland-run-2025'
               className='flex cursor-pointer border-2 border-gray-800 text-gray-800 px-6 py-3 font-semibold hover:bg-gray-800 hover:text-white transition-all duration-300 items-center gap-2 group w-fit mt-8'>

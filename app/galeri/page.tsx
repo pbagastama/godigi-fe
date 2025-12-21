@@ -51,7 +51,7 @@ export default function GaleriPage() {
             className='object-contain w-[692px] h-auto absolute top-[-400px] md:top-[-500px] left-0 z-0'
           />
         </div>
-        <div className='absolute inset-0'>
+        <div className='absolute inset-0 hidden md:block'>
           <Image
             src='/assets/gallery/gallery-bg-section-2.png'
             alt='Gallery Background'

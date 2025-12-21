@@ -125,7 +125,7 @@ export default function Home() {
             className='object-contain w-[420px] h-[820px] absolute top-[-160px] right-[-100px]'
           />
         </div>
-        <div className='absolute inset-0'>
+        <div className='absolute inset-0 hidden md:block'>
           <Image
             src='/assets/home/bg-count-elevate.png'
             alt='Countdown Background'
