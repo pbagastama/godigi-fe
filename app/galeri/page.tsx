@@ -56,7 +56,7 @@ export default function GaleriPage() {
             src='/assets/gallery/gallery-bg-section-2.png'
             alt='Gallery Background'
             fill
-            className='object-cover opacity-70'
+            className='object-cover relative z-0'
           />
         </div>
         <div className='container-fluid lg:container mx-auto px-6 sm:px-12 xl:px-6 relative z-10'>
@@ -66,7 +66,7 @@ export default function GaleriPage() {
                 <div className='text-[#333] text-3xl md:text-5xl font-medium tracking-tighter mb-2 leading-tight'>
                   ROAD TO <span className='font-bold'>DIGILAND RUN</span> 2025
                 </div>
-                <div className='text-base sm:text-lg font-semibold leading-tight'>
+                <div className='text-base sm:text-lg font-semibold'>
                   APRIL - MEI
                 </div>
               </div>

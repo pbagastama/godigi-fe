@@ -104,7 +104,7 @@ export default function Home() {
               height={160}
               className='w-72 h-auto mb-6'
             />
-            <p className='text-base md:text-lg leading-relaxed'>
+            <p className='text-base md:text-lg relative z-10'>
               Menghadirkan Digiland sebagai pengalaman yang imersif, interaktif,
               dengan didorong oleh inovasi, yang menyajikan kebahagiaan,
               mempererat hubungan, serta menyebarkan energi positif yang
@@ -134,7 +134,7 @@ export default function Home() {
           />
         </div>
         <div className='relative z-10 container mx-auto px-6'>
-          <div className='flex flex-wrap justify-center items-center gap-8 md:gap-12 h-auto md:h-[75vh]'>
+          <div className='flex flex-wrap justify-center items-center gap-8 md:gap-24 h-auto md:h-[75vh]'>
             <div className='text-center'>
               <div className='text-3xl md:text-5xl lg:text-7xl font-bold text-white mb-2'>
                 {countdown.days}
@@ -188,7 +188,7 @@ export default function Home() {
           alt='DGLD DIGILAND 2025'
           width={300}
           height={200}
-          className='w-64 lg:w-80 h-auto absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'
+          className='w-52 md:w-64 lg:w-80 h-auto absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'
         />
       </section>
 
@@ -393,8 +393,8 @@ export default function Home() {
       {/* Pasar Rakyat Section */}
       <section
         id='pasar-rakyat'
-        className='relative py-10 md:py-20 overflow-hidden h-[110vh] md:h-[120vh]'>
-        <div className='absolute inset-0'>
+        className='relative py-10 md:py-20 overflow-hidden h-auto md:h-[120vh]'>
+        <div className='absolute inset-0 hidden md:block'>
           <Image
             src='/assets/home/home-bg-section-6.png'
             alt='Pasar Rakyat Background'
@@ -412,7 +412,7 @@ export default function Home() {
           />
         </div>
         <div className='flex relative z-10 container mx-auto px-6 md:hidden flex-col'>
-          <p className='text-gray-800 mb-6 text-lg leading-relaxed text-left'>
+          <p className='text-gray-800 mt-8 mb-6 text-base md:text-lg leading-relaxed text-left'>
             Nikmati jajanan{' '}
             <span className='font-bold'>#PasarRakyatDigiland</span> di acara{' '}
             <span className='font-bold'>#DIGILAND 2025</span>.
@@ -421,7 +421,7 @@ export default function Home() {
             Jangan lupa beli yang banyak ya untuk membantu para UMKM di
             Indonesia!!.
           </p>
-          <button className='cursor-pointer border-2 border-gray-800 text-gray-800 px-6 py-3 font-semibold hover:bg-gray-800 hover:text-white transition-all duration-300 flex items-center gap-2 group'>
+          <button className='cursor-pointer border-2 border-gray-800 text-gray-800 px-6 py-3 font-semibold hover:bg-gray-800 hover:text-white transition-all duration-300 flex items-center gap-2 group w-fit'>
             <span>Selengkapnya</span>
             <span className='group-hover:translate-x-1 transition-transform'>
               →
@@ -448,7 +448,7 @@ export default function Home() {
       </section>
 
       {/* Artikel Terbaru Section */}
-      <section className='relative py-20 bg-white'>
+      <section className='relative py-10 md:py-20 bg-white'>
         <div className='container mx-auto px-6'>
           <div className='flex justify-center md:justify-between items-center mb-8 md:mb-16'>
             <h2 className='text-3xl md:text-5xl font-bold text-gray-800'>

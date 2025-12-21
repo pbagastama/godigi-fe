@@ -30,10 +30,10 @@ export default function Header() {
   return (
     <header className='fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-sm'>
       <nav className='container mx-auto px-6 py-6 flex items-center justify-between'>
-        <Link href='#beranda' onClick={closeMenu}>
+        <Link href='/' onClick={closeMenu}>
           <Image
             src='/assets/logo.png'
-            alt='OGLO DIGILAND'
+            alt='LOGO DIGILAND'
             width={120}
             height={40}
             className='h-auto w-20'

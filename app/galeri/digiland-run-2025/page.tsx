@@ -98,7 +98,7 @@ export default function GaleriDetailPage() {
 
       {/* Gallery Detail Section */}
       <section className='relative py-20 overflow-hidden h-auto'>
-        <div className='relative'>
+        <div className='relative z-0'>
           <Image
             src='/assets/about/about-gradient-section-2.png'
             alt='gradient background'
@@ -107,7 +107,7 @@ export default function GaleriDetailPage() {
             className='object-contain w-[692px] h-auto absolute top-[-400px] md:top-[-500px] left-0 z-0'
           />
         </div>
-        <div className='container mx-auto px-6 sm:px-12 xl:px-6 relative z-10'>
+        <div className='container mx-auto px-6 sm:px-12 xl:px-6 relative z-20'>
           <div className='w-full mt-0 md:mt-10'>
             <div className='text-left'>
               <div className='font-light text-base md:text-lg lg:text-xl'>

@@ -19,7 +19,7 @@ const TicketPurchaseSection = ({
   onButtonClick,
 }: TicketPurchaseSectionProps) => {
   return (
-    <section className='relative pt-16 pb-40 md:pb-20 overflow-hidden h-[52vh] md:h-auto'>
+    <section className='relative pt-16 pb-40 md:pb-20 overflow-hidden h-[65vh] md:h-auto'>
       <div className='absolute inset-0'>
         <Image
           src='/assets/home/home-bg-section-7.png'

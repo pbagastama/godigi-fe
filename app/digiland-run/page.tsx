@@ -56,7 +56,7 @@ export default function DigilandRunPage() {
             className='object-contain w-[692px] h-auto absolute top-[-600px] left-0 z-0'
           />
         </div>
-        <div className='container mx-auto px-4 md:px-6'>
+        <div className='container mx-auto px-4 md:px-6 relative z-10'>
           <div className='flex flex-col xl:flex-row gap-8 md:gap-12 items-start'>
             <div className='flex items-center justify-center md:justify-start w-full xl:w-4/12'>
               <div className='text-left max-w-full xl:max-w-[420px]'>
@@ -112,23 +112,23 @@ export default function DigilandRunPage() {
             </Link>
           </div>
         </div>
-        <div className='container mx-auto px-4 md:px-6 py-20 relative'>
+        <div className='container mx-auto px-4 md:px-6 py-20 relative z-10'>
           <div className='absolute inset-0'>
             <Image
               src='/assets/run/run-bg-section-3.png'
               alt='Gallery Background'
               fill
-              className='object-cover opacity-70'
+              className='object-cover relative z-0'
             />
           </div>
           <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8'>
-            <div className='w-full flex flex-col items-center justify-center'>
+            <div className='w-full flex flex-col items-center justify-center mb-6 md:mb-0'>
               <Image
                 src='/assets/run/run-item-gift-1.png'
                 alt='Run Prize 1'
                 width={350}
                 height={320}
-                className='w-48 h-auto mb-8'
+                className='w-48 h-auto -mb-2 md:mb-8'
               />
               <div className='text-center'>
                 <p className='text-[#333] text-base md:text-lg leading-relaxed font-bold'>
@@ -136,13 +136,13 @@ export default function DigilandRunPage() {
                 </p>
               </div>
             </div>
-            <div className='w-full flex flex-col items-center justify-center'>
+            <div className='w-full flex flex-col items-center justify-center mb-6 md:mb-0'>
               <Image
                 src='/assets/run/run-item-gift-2.png'
                 alt='Run Prize 2'
                 width={350}
                 height={320}
-                className='w-48 h-auto mb-8'
+                className='w-48 h-auto -mb-2 md:mb-8'
               />
               <div className='text-center'>
                 <p className='text-[#333] text-base md:text-lg leading-relaxed font-bold'>
@@ -150,13 +150,13 @@ export default function DigilandRunPage() {
                 </p>
               </div>
             </div>
-            <div className='w-full flex flex-col items-center justify-center'>
+            <div className='w-full flex flex-col items-center justify-center mb-6 md:mb-0'>
               <Image
                 src='/assets/run/run-item-gift-3.png'
                 alt='Run Prize 3'
                 width={350}
                 height={320}
-                className='w-48 h-auto justify-center mb-8'
+                className='w-48 h-auto justify-center mb-4 md:mb-8'
               />
               <div className='text-center'>
                 <p className='text-[#333] text-base md:text-lg leading-relaxed font-bold'>
@@ -165,7 +165,7 @@ export default function DigilandRunPage() {
               </div>
             </div>
           </div>
-          <div className='flex flex-col items-end text-right mt-20 mb-8 px-24 max-w-4xl ms-auto'>
+          <div className='flex flex-col items-start md:items-end text-left md:text-right mt-20 mb-8 px-4 md:px-24 max-w-4xl ms-auto relative z-10'>
             Item-item yang dukung kenyamanan & kelancaran lari, serta medali
             sesuai kategori untuk kamu yang sampai garis finish.
             <Link
