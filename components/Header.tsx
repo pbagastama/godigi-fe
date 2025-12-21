@@ -21,8 +21,6 @@ export default function Header() {
     if (href.startsWith('/')) {
       return pathname === href;
     }
-    // Hash links tidak aktif secara default, hanya aktif jika di section tersebut
-    // Untuk sekarang, hash links tidak aktif kecuali jika diperlukan scroll detection
     if (href.startsWith('#')) {
       return false;
     }
@@ -63,8 +61,12 @@ export default function Header() {
             TENTANG
           </Link>
           <Link
-            href='#digiland-run'
-            className='transition-colors hover:text-[#AA216A]'>
+            href='/digiland-run'
+            className={`transition-colors ${
+              isActive('/digiland-run')
+                ? 'text-[#AA216A] font-bold'
+                : 'hover:text-[#AA216A]'
+            }`}>
             DIGILAND RUN
           </Link>
           <Link
@@ -130,9 +132,13 @@ export default function Header() {
             TENTANG
           </Link>
           <Link
-            href='#digiland-run'
+            href='/digiland-run'
             onClick={closeMenu}
-            className='font-semibold transition-colors py-2 text-white hover:text-[#AA216A]'>
+            className={`font-semibold transition-colors py-2 ${
+              isActive('/digiland-run')
+                ? 'text-[#AA216A]'
+                : 'text-white hover:text-[#AA216A]'
+            }`}>
             DIGILAND RUN
           </Link>
           <Link
