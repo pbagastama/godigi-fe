@@ -46,6 +46,7 @@ export default function DigilandRunPage() {
         </div>
       </section>
 
+      {/* Run Information Section */}
       <section className='relative py-16 md:pb-24 lg:pb-32 bg-white'>
         <div className='relative hidden md:block'>
           <Image
