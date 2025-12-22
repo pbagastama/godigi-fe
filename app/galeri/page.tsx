@@ -66,7 +66,7 @@ export default function GaleriPage() {
                 <div className='text-[#333] text-3xl md:text-5xl font-medium tracking-tighter mb-2 leading-tight'>
                   ROAD TO <span className='font-bold'>DIGILAND RUN</span> 2025
                 </div>
-                <div className='text-base sm:text-lg font-semibold'>
+                <div className='text-[#333] text-base sm:text-lg font-semibold'>
                   APRIL - MEI
                 </div>
               </div>
@@ -97,7 +97,7 @@ export default function GaleriPage() {
                 <div className='text-[#333] text-3xl md:text-5xl font-medium tracking-tight mb-2 leading-tight'>
                   <span className='font-bold'>DIGILAND RUN</span> 2025
                 </div>
-                <div className='text-base sm:text-lg font-semibold leading-tight'>
+                <div className='text-[#333] text-base sm:text-lg font-semibold'>
                   MINGGU 18 MEI 2025
                 </div>
               </div>

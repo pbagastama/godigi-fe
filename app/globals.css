@@ -65,29 +65,17 @@ html {
   }
 
   100% {
-    transform: translateX(-33.333%);
-    -webkit-transform: translateX(-33.333%);
-    -moz-transform: translateX(-33.333%);
-    -ms-transform: translateX(-33.333%);
-    -o-transform: translateX(-33.333%);
+    transform: translateX(-50%);
   }
 }
 
 @keyframes marquee-hero {
   0% {
-    transform: translateX(-100%);
-    -webkit-transform: translateX(-100%);
-    -moz-transform: translateX(-100%);
-    -ms-transform: translateX(-100%);
-    -o-transform: translateX(-100%);
+    transform: translateX(-50%);
   }
 
   100% {
-    transform: translateX(100%);
-    -webkit-transform: translateX(100%);
-    -moz-transform: translateX(100%);
-    -ms-transform: translateX(100%);
-    -o-transform: translateX(100%);
+    transform: translateX(0);
   }
 }
 
@@ -112,11 +100,11 @@ html {
 }
 
 .animate-marquee {
-  animation: marquee 8s linear infinite;
-  -webkit-animation: marquee 8s linear infinite;
+  animation: marquee 4s linear infinite;
+  -webkit-animation: marquee 4s linear infinite;
 }
 
 .animate-marquee-hero {
-  animation: marquee-hero 8s linear infinite;
-  -webkit-animation: marquee-hero 8s linear infinite;
+  animation: marquee-hero 5s linear infinite;
+  -webkit-animation: marquee-hero 5s linear infinite;
 }

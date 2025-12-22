@@ -95,7 +95,7 @@ export default function Home() {
             className='object-contain w-[340px] h-[140px] absolute top-0 left-[150px]'
           />
         </div>
-        <div className='container relative z-10 text-left px-6 w-full'>
+        <div className='container relative z-20 text-left px-6 w-full'>
           <div className='max-w-4xl ms-auto'>
             <Image
               src='/assets/ElevatingYourJoy.png'
@@ -104,7 +104,7 @@ export default function Home() {
               height={160}
               className='w-72 h-auto mb-6'
             />
-            <p className='text-base md:text-lg relative z-10'>
+            <p className='text-[#333] text-base md:text-lg relative z-20'>
               Menghadirkan Digiland sebagai pengalaman yang imersif, interaktif,
               dengan didorong oleh inovasi, yang menyajikan kebahagiaan,
               mempererat hubungan, serta menyebarkan energi positif yang
@@ -125,7 +125,7 @@ export default function Home() {
             className='object-contain w-[420px] h-[820px] absolute top-[-160px] right-[-100px]'
           />
         </div>
-        <div className='absolute inset-0 hidden md:block'>
+        <div className='absolute inset-0'>
           <Image
             src='/assets/home/bg-count-elevate.png'
             alt='Countdown Background'
@@ -136,34 +136,34 @@ export default function Home() {
         <div className='relative z-10 container mx-auto px-6'>
           <div className='flex flex-wrap justify-center items-center gap-8 md:gap-24 h-auto md:h-[75vh]'>
             <div className='text-center'>
-              <div className='text-3xl md:text-5xl lg:text-7xl font-bold text-white mb-2'>
+              <div className='text-3xl md:text-5xl lg:text-8xl font-bold text-white mb-2'>
                 {countdown.days}
               </div>
-              <div className='text-base md:text-lg lg:text-xl text-white/90'>
+              <div className='text-base md:text-xl lg:text-3xl text-white/90'>
                 HARI
               </div>
             </div>
             <div className='text-center'>
-              <div className='text-3xl md:text-5xl lg:text-7xl font-bold text-white mb-2'>
+              <div className='text-3xl md:text-5xl lg:text-8xl font-bold text-white mb-2'>
                 {countdown.hours}
               </div>
-              <div className='text-base md:text-lg lg:text-xl text-white/90'>
+              <div className='text-base md:text-xl lg:text-3xl text-white/90'>
                 JAM
               </div>
             </div>
             <div className='text-center'>
-              <div className='text-3xl md:text-5xl lg:text-7xl font-bold text-white mb-2'>
+              <div className='text-3xl md:text-5xl lg:text-8xl font-bold text-white mb-2'>
                 {countdown.minutes}
               </div>
-              <div className='text-base md:text-lg lg:text-xl text-white/90'>
+              <div className='text-base md:text-xl lg:text-3xl text-white/90'>
                 MENIT
               </div>
             </div>
             <div className='text-center'>
-              <div className='text-3xl md:text-5xl lg:text-7xl font-bold text-white mb-2'>
+              <div className='text-3xl md:text-5xl lg:text-8xl font-bold text-white mb-2'>
                 {countdown.seconds}
               </div>
-              <div className='text-base md:text-lg lg:text-xl text-white/90'>
+              <div className='text-base md:text-xl lg:text-3xl text-white/90'>
                 DETIK
               </div>
             </div>
@@ -172,9 +172,7 @@ export default function Home() {
       </section>
 
       {/* Digiland Run Section */}
-      <section
-        id='digiland-run'
-        className='relative py-20 overflow-hidden h-[50vh] md:h-screen'>
+      <section className='relative py-20 overflow-hidden h-[50vh] md:h-screen'>
         <div className='absolute inset-0'>
           <Image
             src='/assets/home/home-bg-section-3.png'
@@ -463,7 +461,7 @@ export default function Home() {
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 mb-10 md:mb-0'>
             <article className='bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow'>
-              <div className='relative h-48 sm:h-96 md:h-64 lg:h-80'>
+              <div className='relative h-52 sm:h-96 md:h-64 lg:h-80'>
                 <Image
                   src='/assets/home/article-1.png'
                   alt='Article 1'
@@ -473,7 +471,7 @@ export default function Home() {
               </div>
             </article>
             <article className='bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow'>
-              <div className='relative h-48 sm:h-96 md:h-64 lg:h-80'>
+              <div className='relative h-52 sm:h-96 md:h-64 lg:h-80'>
                 <Image
                   src='/assets/home/article-2.png'
                   alt='Article 2'
@@ -483,7 +481,7 @@ export default function Home() {
               </div>
             </article>
             <article className='bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow'>
-              <div className='relative h-48 sm:h-96 md:h-64 lg:h-80'>
+              <div className='relative h-52 sm:h-96 md:h-64 lg:h-80'>
                 <Image
                   src='/assets/home/article-3.png'
                   alt='Article 3'

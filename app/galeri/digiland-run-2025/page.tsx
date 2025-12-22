@@ -110,7 +110,7 @@ export default function GaleriDetailPage() {
         <div className='container mx-auto px-6 sm:px-12 xl:px-6 relative z-20'>
           <div className='w-full mt-0 md:mt-10'>
             <div className='text-left'>
-              <div className='font-light text-base md:text-lg lg:text-xl'>
+              <div className='text-[#333] font-light text-base md:text-lg lg:text-xl'>
                 Ditemukan <span className='font-bold'>12 Foto</span> Sesuai
                 nomor BIB <span className='font-bold'>6020</span> dalam kategori{' '}
                 <span className='font-bold'>Half Marathon</span>
